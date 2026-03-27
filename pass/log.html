@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Login</title>
+<script>
+function validate(){
+  let user = username.value;
+  let pass = password.value;
+  let userPattern = /^[A-Za-z0-9]{3,}$/;     // min 3 chars, no special chars
+  let passPattern = /^[A-Za-z0-9@#]{6,}$/;   // min 6 chars
+  if(!userPattern.test(user)){
+    result.innerHTML = "Invalid Username!";
+    return false;
+  }
+  if(!passPattern.test(pass)){
+    result.innerHTML = "Invalid Password!";
+    return false;
+  }
+  result.innerHTML = "Login Successful!";
+  return false;
+}
+</script>
+</head>
+<body align="center">
+<h2>Login Page</h2>
+<form onsubmit="return validate()">
+  <input id="username" placeholder="Username"><br><br>
+  <input id="password" type="password" placeholder="Password"><br><br>
+ <button type="submit">Login</button>
+</form>
+<p id="result"></p>
+</body>
+</html>
