@@ -1,0 +1,50 @@
+<html> 
+<head> 
+    <title>College Frame Layout</title> 
+</head> 
+<body> 
+    <div style="background-color: lightblue; text-align: center; padding: 15px;"> 
+    <h1>KES SHROFF COLLEGE</h1> 
+    </div> 
+    <div style="display: flex; height: 400px;"> 
+    <div style="width: 30%; background-color: lightgray; padding: 10px;"> 
+    <h3>Menu</h3> 
+     <ul> 
+     <li><a href="#" onclick="loadContent('courses')">Courses</a></li> 
+     <li><a href="#" onclick="loadContent('departments')">Departments</a></li> 
+     <li><a href="#" onclick="loadContent('faculties')">Faculties</a></li> 
+     <li><a href="#" onclick="loadContent('library')">Library</a></li> 
+     </ul> 
+     </div> 
+        <div id="rightFrame" style="width: 70%; padding: 20px;"> 
+            <h2>Welcome to KES SHROFF COLLEGE</h2> 
+            <p>Select an option from the left menu.</p> 
+        </div> 
+     </div> 
+        <div style="background-color: lightgreen; text-align: center; padding: 10px;"> 
+        <marquee>Welcome to KES SHROFF College Website</marquee> 
+    </div> 
+    <script> 
+        function loadContent(section) { 
+            let content = ""; 
+      if (section === "courses") { 
+                content = "<h2>Courses 
+Offered</h2><ul><li>BCA</li><li>BBA</li><li>B.Com</li></ul>"; 
+            } 
+            else if (section === "departments") { 
+                content = "<h2>Departments</h2><ul><li>Computer 
+Science</li><li>Commerce</li><li>Management</li></ul>"; 
+            } 
+            else if (section === "faculties") { 
+                content = "<h2>Faculties</h2><ul><li>Dr. Sharma</li><li>Prof. Khan</li><li>Mrs. 
+Patel</li></ul>"; 
+            } 
+            else if (section === "library") { 
+                content = "<h2>Library</h2><p>Our library has books, journals, and digital 
+resources. </p>"; 
+            } 
+                 document.getElementById("rightFrame").innerHTML = content; 
+        } 
+        </script> 
+</body> 
+</html> 
